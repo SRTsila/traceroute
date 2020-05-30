@@ -5,7 +5,10 @@ import argparse
 
 
 def input_data():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Запуск производится из консоли с ключом --description где нужно вставить ip адрес или доменное имя"
+                    "\nРезультат работы программы будет выведен в консоли"
+                    "\nПример запуска: python main.py --description e1.ru"
+                    "\nБикоев Константин КН202 МЕН180207")
     parser.add_argument('--destination', type=str, help="Введите IP адрес или доменное имя")
     namespace = parser.parse_args()
     if namespace.destination is not None:
